@@ -318,7 +318,7 @@ function mostrarFeedback(acertou, pontosGanhos, explicacao) {
   els.placarParcial.textContent = estado.pontos;
   mostrarTela("feedback");
 }
-  
+
 
 
 // proximaPergunta()
@@ -406,5 +406,21 @@ els.btnProxima.addEventListener("click", proximaPergunta);
 // Crie a função init() e chame ela aqui.
 // Ela deve preencher totalPerguntas e totalCategorias na home.
 // ------------------------------------------------------------
+function init() {
+  let categorias = []
+
+  if(categorias.indexOf(perguntas.categoria) === -1){
+    categorias.push(perguntas.categoria)
+    console.log("resultado da verificação" + categorias.indexOf(perguntas[i].categorias))
+    console.log(perguntas[i].categoria)
+    console.log(categorias)
+    categorias.push(perguntas[i].categoria)
+  }
+  console.log(categorias)
+  els.totalPerguntas.textContent = perguntas.length;
+  els.totalCategorias.textContent = categorias.length;
+}
+
+init();
 
   
